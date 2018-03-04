@@ -1,0 +1,162 @@
+<html ng-app="app" class="ng-scope">
+
+	<head>
+		<style type="text/css">
+			@charset "UTF-8";
+			[ng\:cloak],
+			[ng-cloak],
+			[data-ng-cloak],
+			[x-ng-cloak],
+			.ng-cloak,
+			.x-ng-cloak,
+			.ng-hide {
+				display: none !important;
+			}
+
+			ng\:form {
+				display: block;
+			}
+
+			.ng-animate-block-transitions {
+				transition: 0s all!important;
+				-webkit-transition: 0s all!important;
+			}
+
+			.ng-hide-add-active,
+			.ng-hide-remove {
+				display: block!important;
+			}
+		</style>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<title class="ng-binding">创新娱乐</title>
+		<link href="css/font-awesome.css" rel="stylesheet">
+		<link href="css/app.css?v=1.5.0" rel="stylesheet">
+	</head>
+
+	<body>
+		<!--登录和注册完全沿用以前的页面代码 。修改的代码 开始-->
+		  <!--ps:修改的基础如下-->
+		  <!--1下面的css样式是增加的-->
+
+			<style type="text/css">
+				body{
+					background: url(images/login/bgb.jpg) center 0 no-repeat #1E1221;
+				}
+				.loginfoot{
+					background: rgba(0,0,0,.35);
+					border-top: 2px solid #8D5210;
+				}
+				@media screen and (max-width: 900px){
+					body {
+					    overflow-x: hidden;
+					}
+					.loginbox{
+							position: relative;
+							left:auto;
+							top: auto;
+							margin: 0;
+							width: auto;
+							height: auto;
+							padding: 25px 0;
+
+					}
+					.logo{
+						position: relative;
+						top:auto;
+						left: auto;
+					}
+					.loginhead{
+						display: block;
+						text-align: center;
+						width: auto;
+					}
+					.loginform{
+						position: relative;
+							left:auto;
+							top: auto;right: auto;
+							bottom: auto;
+							margin: 0 auto;
+							background: 0;
+							width: 320px;
+
+					}
+					.loginformbox{
+						position: relative;
+						left: -18px;
+					}
+				}
+				@media screen and (max-width: 400px){
+									.loginform{
+										width: 300px;
+										overflow: hidden;
+									}
+									.loginformbox{
+						position: relative;
+						left: -28px;
+					}
+				}
+			</style>
+			<!--2. logo的图片替换-->
+
+
+		<!--登录和注册完全沿用以前的页面代码 。修改的代码 结束-->
+<!-- uiView: main -->
+		<div ui-view="main" class="ng-scope">
+			<div class="loginbox">
+
+				<!-- uiView: login -->
+				<div class="loginform ng-scope" ui-view="login">
+					<form name="checkForm"  class="ng-scope ng-pristine ng-invalid ng-invalid-required">
+						<div class="loginformbox">
+							<div class="loginformboxtitle">
+								<a class="logintitlelft" ><i class="fa fa-user"></i> 用户登录</a>
+								<a class="logintitlergt" ><i class="fa fa-weixin"></i> 微信扫一扫</a>
+							</div>
+							<div class="loginformboxcontent" ng-show="loginMode==0">
+								<p><i class="fa fa-user"></i><input  required="" placeholder="用户名" title="用户名" maxlength="16" class="ng-pristine ng-invalid ng-invalid-required"></p>
+								<p><i class="fa fa-shield"></i><input required="" ng-focus="captcha(0)" placeholder="验证码" maxlength="6" class="ng-pristine ng-invalid ng-invalid-required"> <img src="images/login/ck.jpg"> <input ng-model="checkVM.codesinfo" type="hidden" class="ng-pristine ng-valid"></p>
+								<a href="javascript:;" ng-click="checkVM.checktype=checkVM.checktype<=0?1:0"><i class="fa fa-square-o"></i> 使用谷歌身份验证方式快速登录</a>
+								<div><input ng-disabled="loading || checkForm.$invalid" type="submit" value="开始登录" disabled="disabled"></div>
+								<a ui-sref="safe.freeze" href="#/freeze">账号被盗？点击这里紧急冻结！</a>
+								<div class="loginbottomcontent">
+									<a ng-click="forget()">忘记密码？</a>
+									<a href="views/help/gauth.html" target="_blank">安装谷歌身份验证？</a>
+								</div>
+							</div>
+							<div ng-show="loginMode==1" class="ng-hide">
+								<div class="codescan"><span><img ng-src="" style="background-color:white"><br><br></span>
+									<a class="c1"><i class="fa fa-weixin"></i> 微信自动登录 <i class="fa fa-check-square-o"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a class="c1"><i class="fa fa-tv"></i> 网页自动登录 <i class="fa fa-square-o"></i></a><br>
+									<a class="c4"><i class="fa fa-lock"></i> 登录密码重置 <i class="fa fa-square-o"></i></a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="loginfoot">
+				<div class="loginfootbox">
+					<div class="loginfootboxleft">
+						<div>浏览器下载</div>
+						<p>
+							<a href="" target="_blank"><span class="bg1"><i class="fa fa-chrome"></i></span> <strong>谷歌浏览器<em>版本：52.0</em></strong> </a>
+							<a href="" target="_blank"><span class="bg2"><i class="fa fa-firefox"></i> </span><strong>火狐浏览器<em>版本：48.0</em></strong> </a>
+							<a href="" target="_blank"><span class="bg3"><i class="fa fa-internet-explorer"></i></span><strong>360浏览器<em>版本：8.70</em></strong></a>
+						</p>
+					</div>
+					<div class="loginfootboxright ng-scope" ng-controller="indexController">
+						<div>手机端下载</div>
+						<p>
+							<a ng-click="phoneClient(0)"><span class="bg4"><i class="fa fa-apple"></i></span><strong>苹果版<em>版本：1.3.8</em></strong> </a>
+							<a ng-click="phoneClient(1)"><span class="bg5"><i class="fa fa-android"></i></span><strong>安卓版<em>版本：1.3.8</em></strong></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

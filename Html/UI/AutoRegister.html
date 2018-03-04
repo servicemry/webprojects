@@ -1,0 +1,165 @@
+<html ng-app="app" class="ng-scope">
+
+	<head>
+		<style type="text/css">
+			@charset "UTF-8";
+			[ng\:cloak],
+			[ng-cloak],
+			[data-ng-cloak],
+			[x-ng-cloak],
+			.ng-cloak,
+			.x-ng-cloak,
+			.ng-hide {
+				display: none !important;
+			}
+
+			ng\:form {
+				display: block;
+			}
+
+			.ng-animate-block-transitions {
+				transition: 0s all!important;
+				-webkit-transition: 0s all!important;
+			}
+
+			.ng-hide-add-active,
+			.ng-hide-remove {
+				display: block!important;
+			}
+		</style>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<title class="ng-binding">万达[1.5.0]</title>
+		<link href="https://x1.wda666.com/font/font-awesome.min.css" rel="stylesheet">
+		<link href="https://x1.wda666.com/css/app.css?v=1.5.0" rel="stylesheet">
+	</head>
+
+	<body>
+
+
+
+
+		<!--登录和注册完全沿用以前的页面代码 。修改的代码 开始-->
+		  <!--ps:修改的基础如下-->
+		  <!--1下面的css样式是增加的-->
+
+			<style type="text/css">
+				body{
+					background: url(images/login/bgb.jpg) center 0 no-repeat #1E1221;
+				}
+				.loginfoot{
+					background: rgba(0,0,0,.35);
+					border-top: 2px solid #8D5210;
+				}
+				.loginfootbox div p a span{
+
+				}
+				@media screen and (max-width: 900px){
+					body {
+					    overflow-x: hidden;
+					}
+					.loginbox{
+							position: relative;
+							left:auto;
+							top: auto;
+							margin: 0;
+							width: auto;
+							height: auto;
+							padding: 25px 0;
+
+					}
+					.logo{
+						position: relative;
+						top:auto;
+						left: auto;
+					}
+					.loginhead{
+						display: block;
+						text-align: center;
+						width: auto;
+					}
+					.loginform{
+						position: relative;
+							left:auto;
+							top: auto;right: auto;
+							bottom: auto;
+							margin: 0 auto;
+							background: 0;
+							width: 320px;
+
+					}
+					.loginformbox{
+						position: relative;
+						left: -18px;
+					}
+				}
+				@media screen and (max-width: 400px){
+									.loginform{
+										width: 300px;
+										overflow: hidden;
+									}
+									.loginformbox{
+						position: relative;
+						left: -28px;
+					}
+				}
+			</style>
+			<!--2. logo的图片替换-->
+
+
+		<!--登录和注册完全沿用以前的页面代码 。修改的代码 结束-->
+
+
+
+
+
+		<!-- uiView: main -->
+		<div ui-view="main" class="ng-scope">
+			<div class="loginbox">
+				<div class="loginhead"><img alt="" class="logo" src="images/login/logo.png"></div>
+				<!-- uiView: login -->
+				<div class="loginform ng-scope" ui-view="login">
+					<!-- uiView: undefined -->
+					<ui-view name="safe" class="ng-scope">
+						<form name="regForm" ng-submit="reg()" class="ng-scope ng-pristine ng-invalid ng-invalid-required">
+							<div class="loginformbox">
+								<div class="loginformboxtitle">用户注册</div>
+								<div class="loginformboxcontent">
+									<p><i class="fa fa-user"></i><input ng-model="regVM.name" placeholder="用户名" required="" maxlength="16" class="ng-pristine ng-invalid ng-invalid-required"></p>
+									<p><i class="fa fa-lock"></i><input ng-model="regVM.pwd" type="password" required="" placeholder="用户密码" maxlength="64" class="ng-pristine ng-invalid ng-invalid-required"></p>
+									<p><i class="fa fa-shield"></i><input ng-model="regVM.code" required="" placeholder="验证码" maxlength="6" class="ng-pristine ng-invalid ng-invalid-required"> <img alt="" src="data:image/jpeg;base64,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" ng-click="captcha()"></p>
+									<a href="#/">取消用户注册返回登录？</a>
+									<div><input ng-disabled="loading || regForm.$invalid" type="submit" value="用户注册" disabled="disabled"></div>
+								</div>
+							</div>
+						</form>
+					</ui-view>
+				</div>
+			</div>
+			<div class="loginfoot">
+				<div class="loginfootbox">
+					<div class="loginfootboxleft">
+						<div>浏览器下载</div>
+						<p>
+							<a href="http://sw.bos.baidu.com/sw-search-sp/software/3d03c3764837b/ChromeStandalone_52.0.2743.116_Setup.exe" target="_blank"><span class="bg1"><i class="fa fa-chrome"></i></span> <strong>谷歌浏览器<em>版本：52.0</em></strong> </a>
+							<a href="http://sw.bos.baidu.com/sw-search-sp/software/9d088e907eea2/Firefox_48.0.2.6079_setup.exe" target="_blank"><span class="bg2"><i class="fa fa-firefox"></i> </span><strong>火狐浏览器<em>版本：48.0</em></strong> </a>
+							<a href="http://down.360safe.com/cse/360cse_8.7.0.202.exe" target="_blank"><span class="bg3"><i class="fa fa-internet-explorer"></i></span><strong>360浏览器<em>版本：8.70</em></strong></a>
+						</p>
+					</div>
+					<div class="loginfootboxright ng-scope" ng-controller="indexController">
+						<div>手机端下载</div>
+						<p>
+							<a ng-click="phoneClient(0)"><span class="bg4"><i class="fa fa-apple"></i></span><strong>苹果版<em>版本：1.3.8</em></strong> </a>
+							<a ng-click="phoneClient(1)"><span class="bg5"><i class="fa fa-android"></i></span><strong>安卓版<em>版本：1.3.8</em></strong></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/angular.js"></script>
+		<script src="js/app.js?v=1.5.0"></script>
+	</body>
+
+</html>

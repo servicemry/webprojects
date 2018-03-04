@@ -1,0 +1,1 @@
+function add(a,d){return a+d}alert("改变了"),console.log("loadjavascript"),add(5,9);

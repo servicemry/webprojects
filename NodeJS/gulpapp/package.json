@@ -1,0 +1,20 @@
+{
+  "name": "gulpapp",
+  "version": "1.0.0",
+  "description": "本案例演示如何使用gulp自动构建工具 1.npm init 构建package.json 2.npm install gulp -g --save 全局安装gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "henry",
+  "license": "ISC",
+  "devDependencies": {
+    "cnpm": "^5.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "install": "^0.10.4"
+  }
+}
