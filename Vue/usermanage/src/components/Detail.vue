@@ -1,20 +1,19 @@
 <template>
   <div class="detail container">
-    <router-link to="/" class=" btn btn-default">返回</router-link>
-    <h1 class="page-header">{{user.name}}
-      <span class=" pull-right">
-        <router-link v-bind:to="'/edit/'+user.id" class="btn btn-primary">编辑</router-link>
-        <button type="button" class="btn btn-danger" v-on:click="removeUser(user.id)">删除</button>
-      </span>
-    <br>
-    </h1>
-
+    <h1 class="page-header">用户详情</h1>
     <div class="well">
-      <ul class=" list-group">
-        <li class=" list-group-item"><span class="glyphicon glyphicon-unchecked">{{user.age}}  </span></li>
-        <li class=" list-group-item"><span class="glyphicon glyphicon-phone">{{user.phone}}</span></li>
-        <li class=" list-group-item"><span class="glyphicon glyphicon-record">{{user.email}}</span></li>
+      <div class="navbar-right"><router-link to="/" class="btn btn-default btn-lg">返回</router-link></div>
+      <h4><i class="glyphicon glyphicon-user"><span>{{user.name}}</span></i></h4>
+      <ul>
+        <li><i class="glyphicon glyphicon-phone"><span>{{user.phone}}</span></i></li>
+        <li><i class="glyphicon glyphicon-record"><span>{{user.age}}</span></i></li>
+        <li><i class="glyphicon glyphicon-envelope"><span>{{user.email}}</span></i></li>
+        <li><i class="glyphicon glyphicon-modal-window"><span>{{user.remark}}</span></i></li>
       </ul>
+      <div class="page-footer text-right">
+        <router-link v-bind:to="'/edit/'+id" class="btn btn-primary btn-lg">修改</router-link>
+        <button class="btn btn-danger btn-lg" v-on:click="removeUser">删除</button>
+      </div>
     </div>
   </div>
 </template>
@@ -24,26 +23,38 @@ export default {
   name: 'detail',
   data () {
     return {
-      alert: "",
+      msg: 'Welcome to Your Vue.js App',
+      id:'',
       user:{}
     }
   },
-  methods: {
-    getUserById(id){
-      this.$http.get("http://localhost:3000/users/"+id)
-      .then(function(response){
-        this.user=response.body
-      })
-    },
-    removeUser(id){
-      this.$http.delete("http://localhost:3000/users/"+id)
-      .then(function(response){
-        this.$router.push({path:'/',query:{msg:"用户删除成功"}})
+  created () {
+    this.id=this.$route.params.id;
+    this.$axios.get("https://wd1904176496xtlzpc.wilddogio.com/users/"+this.id+".json")
+    .then((response)=>{
+      this.user=response.data;
+    })
+  },
+  methods:{
+    removeUser:function(){
+      this.$axios.delete("https://wd1904176496xtlzpc.wilddogio.com/users/"+this.id+".json")
+      .then((response)=>{
+       this.$router.push({path:'/',query:{msg:"删除成功！"}})
       })
     }
-  },
-  created(){
-    this.getUserById(this.$route.params.id)
   }
 }
 </script>
+
+<style scoped>
+li{
+  list-style-type: none;
+  padding: 8px;
+}
+span{
+  margin-left: 1em;
+}
+button{
+  margin-left: 10px;
+}
+</style>

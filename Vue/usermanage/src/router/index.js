@@ -1,20 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Users from '@/components/Users'
-import About from '@/components/About'
-import Add from '@/components/Add'
+import UserManage from '@/components/UserManage'
+import AddUser from '@/components/AddUser'
 import Detail from '@/components/Detail'
-import Edit from '@/components/Edit'
+import EditUser from '@/components/EditUser'
+
 
 Vue.use(Router)
 
 export default new Router({
+  mode:"history",
   routes: [
-    {path: '/',component: Users},
-    {path: '/about',component: About},
-    {path: '/add',component: Add},
-    {path: '/detail/:id',component: Detail},
-    {path: '/edit/:id',component: Edit}
-    
+    {path: '/',component: UserManage},
+    {path: '/add',component: AddUser},
+    {path:'/user/:id',component: Detail},
+    {path:'/edit/:id',component: EditUser}
   ]
 })
