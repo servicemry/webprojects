@@ -57,7 +57,9 @@ export default {
       }else{
         this.$axios.post('https://wd1904176496xtlzpc.wilddogio.com/users.json',this.user)
         .then((result)=>{
-          this.$router.push({path:'/',query:{msg:"添加成功！"}})
+          this.$store.commit('operationStatus',"添加成功！")
+          this.$store.commit('addUser',this.user)
+          this.$router.push({path:'/'})
           this.user={};
         })
       }

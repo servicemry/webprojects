@@ -17,7 +17,7 @@
          </thead>
 
          <tbody>
-           <tr v-for="user in filterUsers(users,seach)" :key="user.id">
+           <tr v-for="user in filterUsers(this.$store.state.users,seach)" :key="user.id">
              <td>{{user.name}}</td>
              <td>{{user.phone}}</td>
              <td>{{user.age}}</td>
@@ -38,7 +38,6 @@ export default {
   data () {
     return {
       msg: '',
-      users:[],
       seach:''
     }
   },
@@ -51,7 +50,7 @@ export default {
           response.data[key].id=key;
           arr.push(response.data[key]);//将数据推送到数组中
         }
-        this.users=arr;
+        this.$store.commit('setUsers',arr);//将数据同步到vuex中
       }).catch((response)=>{
         console.log('读取数据失败！')
       })
@@ -75,10 +74,7 @@ export default {
     }
   },
   created(){
-    if(this.$route.query.msg){
-      this.msg=this.$route.query.msg;
-    }
-    
+    this.msg=this.$store.state.operationStatus;
     this.getUsers();
   },
   updated(){

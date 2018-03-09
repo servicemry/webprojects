@@ -55,8 +55,9 @@ export default {
       }else{
         this.$axios.put("https://wd1904176496xtlzpc.wilddogio.com/users/"+this.$route.params.id+".json",this.user)
         .then((result)=>{
-          this.user={};
-          this.$router.push({path:'/',query:{msg:"修改成功！"}})
+          this.$store.state.operationStatus="修改成功！"
+          this.user={};//清空表单
+          this.$router.push({path:'/'})
         }).catch((result)=>{
           console.log('修改失败')
         })

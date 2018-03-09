@@ -39,7 +39,8 @@ export default {
     removeUser:function(){
       this.$axios.delete("https://wd1904176496xtlzpc.wilddogio.com/users/"+this.id+".json")
       .then((response)=>{
-       this.$router.push({path:'/',query:{msg:"删除成功！"}})
+       this.$store.commit('operationStatus',"删除成功！")
+       this.$router.push({path:'/'})
       })
     }
   }

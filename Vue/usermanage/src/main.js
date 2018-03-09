@@ -5,12 +5,15 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 
+import {store} from './store/store'
+
 Vue.config.productionTip = false
 Vue.prototype.$axios=axios//挂载Vue全局属性
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
