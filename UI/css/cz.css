@@ -246,7 +246,7 @@ ul.bankboxlist li {
 
 	padding-left: 20px;
 	list-style: none;
-	background-image: url('img/orangepoint.png');
+	/* background-image: url('img/orangepoint.png'); */
 	background-position: 5px 16px;
 	color: #999;
 	background-repeat: no-repeat;
@@ -315,7 +315,7 @@ ul.bankboxlist li {
 }
 #czconfimbox p {
 	background-color: transparent;
-	background-image: url('img/czconformbg.png');
+	/* background-image: url('img/czconformbg.png'); */
 	background-position: 85px center;
 	background-repeat: no-repeat;
 	text-align: center;

@@ -1,0 +1,353 @@
+.czrow {
+	display: table;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.czrow > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+div.czlabel {
+	text-align: right;
+	padding-right: 10px;
+	font-weight: bold;
+	font-size: 14px;
+	white-space: nowrap;
+}
+div.cztxt {
+}
+div.cztxt strong {
+	font-weight: normal;
+	color: #ff0000;
+	padding-right: 20px;
+}
+div.cztxt a {
+	padding-left: 30px;
+	color: #3592e9;
+}
+div.cztxt a:hover {
+	color: #ff0000;
+}
+.jinebox {
+	padding: 0;
+	display: inline-block;
+	margin: auto;
+	width: 260px;
+	height: 49px;
+	text-align: left;
+	font-size: 18px;
+}
+.jinebox input {
+	height: 49px;
+	border: 1px #eee solid;
+	width: 173px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 4px;
+	transition: border-color .5s;
+}
+.jinebox input:focus {
+	box-shadow: 0px 0px 5px #e5e5e5;
+	outline: none;
+	border-color: #489aed;
+}
+ul.bankboxlist {
+	clear: both;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+ul.bankboxlist li {
+	list-style: none;
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+}
+.bankbox {
+	border: 1px #ccc solid;
+	background-color: #fff;
+	display: inline-block;
+	margin-bottom: 20px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	width: 330px;
+	height: 80px;
+	margin: auto;
+	box-sizing: border-box;
+	line-height: 75px;
+	cursor: pointer;
+	box-shadow: 0px 0px 5px #ccc;
+	transition: All 0.4s ease-in-out;
+	background-image: url(../images/bank/radio.png);
+	background-position: right 15px center;
+	background-repeat: no-repeat;
+}
+.bankbox img:last-child {
+	position: absolute;
+	right: 55px;
+	top: 0;
+}
+.bankbox img:first-child {
+	max-width: 169px;
+	max-height: 50px;
+	margin-left: 30px;
+}
+.thisbank {
+	border: 1px #ed6c44 solid;
+	background-image: url(../images/bank/radiothis.png);
+}
+.bankbox > span {
+	padding-left: 10px;
+	font-size: 16px;
+	transition:color .5s
+}
+.thisbank>span
+{
+	color:#f75725
+}
+.czbox {
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	padding-top: 0;
+}
+.czfoot {
+	text-align: center;
+	padding-bottom: 20px;
+}
+.czfoot button {
+	height: 50px;
+	width: 180px;
+	font-size:16px;
+}
+.graybg {
+	background-color: #f5f6f7;
+	padding-left: 20px;
+	border-radius: 10px;
+	padding-top: 20px;
+	padding-bottom: 5px;
+}
+.chongzhibox {
+	padding-top: 10px;
+}
+
+
+
+.form-horizontal .cztxt .radio{
+	padding-top: 2px;
+}
+
+
+
+
+
+.czconfimbox {
+	border-radius: 5px;
+	margin: auto;
+	
+	border: 1px #eee solid;
+	position:relative
+}
+.czconfimbox .p-logo{
+	height:98px;
+}
+.timeinformation {
+    position:absolute;
+	right:10px;
+	bottom:5px;
+	height:64px;
+	width:320px;
+	border:1px #ff0000 dashed;
+    display:none;
+}
+.timeinformation span
+{
+	display:block;
+	width:20px;
+	position:absolute;
+	right:0;
+	top:0;
+	line-height:12px;
+	color:red;
+	background-color:#ddd;
+	text-align:center;
+	padding-left:5px;
+	padding-right:5px;
+}
+.timeinformation p
+{
+	padding-top:10px;
+	padding-left:10px;
+    font-size:24px;
+}
+.timeinformation p strong
+{
+	color:red;
+	font-weight:normal
+}
+.information
+{
+	position:absolute;
+	right:10px;
+	top:5px;
+	
+}
+.information .code table{
+	border: 0;
+}
+.information .code table td{
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.information p
+{
+	padding-top:1px;
+	padding-left:10px;
+}
+.information span
+{
+	display:block;
+	width:20px;
+	position:absolute;
+	right:0;
+	top:0;
+	line-height:14px;
+	color:red;
+	background-color:#ddd;
+	text-align:center;
+	padding-left:5px;
+	padding-right:5px;
+}
+.information p strong
+{
+	color:red;
+	font-weight:normal
+}
+.czconfimbox > p {
+	background-color: #f9f9f9;
+	padding: 10px;
+	text-align: left;
+	padding-left: 30px;
+	border-radius: 5px 5px 0px 0px;
+}
+.czconfimbox > ul {
+	margin: 0;
+	padding-bottom: 5px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.czconfimbox > ul li {
+	padding: 5px;
+
+	padding-left: 20px;
+	list-style: none;
+	/* background-image: url('./../img/orangepoint.png'); */
+	background-position: 5px 16px;
+	color: #999;
+	background-repeat: no-repeat;
+	display:table;
+
+}
+.czconfimbox > ul li p,.czconfimbox > ul li span
+{
+	display:table-cell
+}
+.czconfimbox > ul li span
+{
+	width:80px;
+}
+.czconfimbox > ul li p
+{
+	text-align:left
+}
+.czconfimbox > ul li p strong
+{
+	color:red;
+	font-weight:normal
+}
+.czconfimbox > ul li p input[type=text]
+{
+	vertical-align:middle;
+	height:30px;
+	width:180px;
+	border:1px #ddd solid;
+	color:#000;
+	padding-left:3px;
+}
+.czconfimbox > ul li p label
+{
+	display:block;
+	padding-top:5px;
+}
+.czconfimbox > ul li:last-child {
+	border-bottom: 0;
+}
+.czconfimbox > ul li input[type=button] {
+	background-color: #489aed;
+	border: 0;
+	color: #fff;
+	border-radius: 4px;
+	height: 30px;
+	width:60px;
+	line-height: 30px;
+	vertical-align:middle;
+	margin-left:5px;
+}
+.czconfimbox > ul li span {
+	color: #666;
+	padding-right: 5px;
+}
+#czconfimbox {
+	margin-bottom: 5px;
+	border-radius: 0;
+	margin-top: 10px;
+	border: 1px #ddd dashed;
+}
+#czconfimbox ul li {
+	color: #999;
+	background-image: none;
+	padding-left: 10px;
+}
+#czconfimbox p {
+	background-color: transparent;
+	/* background-image: url('./../img/czconformbg.png'); */
+	background-position: 85px center;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: #f26b41;
+	font-size: 16px;
+	padding: 0;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+.text-center {
+	padding-bottom: 30px;
+}
+.text-center button {
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 180px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+@media only screen and (max-width:640px ) {
+	.czbox{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.cztxt.graybg{
+		padding-left: 5px;
+		padding-top: 5px;
+	}
+	.bankbox{
+		width: 250px;
+	}
+	
+}
