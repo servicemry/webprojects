@@ -33,6 +33,7 @@ export default new Router({
   mode:"history",
   routes: [
     {path: '/',name: 'login',component: Login},
+    {path: '/main',name: 'main',component: Main},
     {path: '/game',name: 'game',component: Game},
     {path: '/beginpay',name: 'beginpay',component: BeginPay},
     {path: '/beginpay2',name: 'beginpay2',component: BeginPay2},
@@ -58,6 +59,5 @@ export default new Router({
     {path: '/teamcalc',name: 'teamcalc',component: TeamCalc},
     {path: '/jjinfo',name: 'jjinfo',component: JJInfo},
     {path: '/autobetinterface',name: 'autobetinterface',component: AutoBetInterface},
-    {path: '/main',name: 'main',component: Main}
   ]
 })
