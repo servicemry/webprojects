@@ -3,7 +3,7 @@
       <div class="nav-nav">
       <ul class="list-unstyled">
         <li class="home">
-          <router-link to="/">
+          <router-link to="/main">
             <i class="icon-home"></i>首页</router-link>
         </li>
         <li class="m">

@@ -1,0 +1,110 @@
+.loginheader{
+    margin-top: 50px;
+}
+
+.loginbody{
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    background: white;
+    -moz-box-shadow:0px 0px 8px rgb(241, 229, 217); 
+    -webkit-box-shadow:0px 0px 8px  rgb(241, 229, 217); 
+    box-shadow:0px 0px 8px  rgb(241, 229, 217); 
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.loginform{
+    margin: 0 auto;
+    width: 90%
+}
+.inputname{
+    outline:none;
+    box-sizing: border-box;
+    margin-top: 50px;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 40px;
+    color: #F98700;
+    border-radius: 5px;
+    font-size: 15px;
+    border: #F98700 solid 1px;
+    -webkit-text-fill-color: #F98700!important;
+}
+.inputbutton{
+    outline:none;
+    box-sizing: border-box;
+    margin-top: 50px;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    color: #Fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    box-shadow: none;
+    border: 0;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 5px 20px 3px rgba(233, 191, 25, 0.5);
+    background: #F98700;
+    background: -webkit-linear-gradient(-40deg, #F98700 0%, #f1ac17 45%, #f1d117 60%, #f3eb09 100%);
+}
+
+
+.loginfooter{
+    margin-top:20px;
+    width: 100%;
+    background-color:#F98700;
+}
+.foot {
+    width: 1000px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 30px 0 20px;
+    text-align: center;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    color: #FFF;
+    line-height: 24px;
+    font-size: 12px;
+}
+.browser b {
+    color: #fff;
+    font-size: 20px;
+}
+.browser a {
+    color: #fff;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.link_right {
+    position: fixed;
+    list-style: none;
+    width: 90px;
+    right: 120px;
+    top: 240px;
+    z-index: 101;
+}
+
+.link_right li {
+    display: inline-block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: rgba(241, 145, 28,0.5);
+    
+}
+.link_right li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+}

@@ -4,7 +4,7 @@
       <div class="navbar navbar-inverse  navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header-row">
-          <router-link to="/" class="a-menu pull-right visible-sm visible-xs" data-toggle="collapse" data-target=".navlist">菜单</router-link>
+          <router-link to="/main" class="a-menu pull-right visible-sm visible-xs" data-toggle="collapse" data-target=".navlist">菜单</router-link>
           <a class="logo">创新游戏</a>
           <div class="btn-sideMenu pull-left">
             <i class="icon-reorder"></i>
@@ -30,7 +30,7 @@
             <div class="col">
               <router-link to="BeginPay" class="btn btn-info">充值</router-link>
               <router-link to="Withdraw" class="btn btn-success">提现</router-link>
-              <router-link to="Login"    class="btn btn-danger">退出</router-link>
+              <router-link to="/"    class="btn btn-danger">退出</router-link>
             </div>
           </div>
         </div>

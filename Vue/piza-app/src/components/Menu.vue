@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div class="row">
     <div class="col-sm-12 col-md-8">
       <table class="table">
@@ -10,9 +10,9 @@
           </tr>
         </thead>
 
-        <tbody v-for="item in getMenuItems">
+        <tbody v-for="item in getMenuItems" :key="item.name">
           <tr><td><strong>{{item.name}}</strong></td></tr>
-          <tr v-for="opt in item.options" >
+          <tr v-for="opt in item.options" :key="opt.price" >
             <td>{{opt.size}}</td>
             <td>{{opt.price}}</td>
             <td><button @click="addShop(item,opt)" class="btn btn-success btn-outline btn-sm">+</button></td>

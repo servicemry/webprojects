@@ -8,7 +8,7 @@ $(document).on("click",".btn-sideMenu",function () {
 	}
 })
 
-$(document).on("click",".J-a-menu",function (e) {
+$(document).on("mouseover",".J-a-menu",function (e) {
 	stopPropagation(e)
 	if ($("body").hasClass("open-menu")) {
 		$("body").removeClass("open-menu")
@@ -16,6 +16,8 @@ $(document).on("click",".J-a-menu",function (e) {
 		$("body").addClass("open-menu")
 	}
 })
+
+
 
 $(document).on("click","body",function (e) {
 
