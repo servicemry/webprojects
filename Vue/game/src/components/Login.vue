@@ -18,7 +18,7 @@
                 <input type="text" class="inputname" placeholder="验证码">
             </div>
             
-            <input type="button" class="inputbutton" value="登录"/>
+            <input type="button" @click="returnMain()" class="inputbutton" value="登录"/>
           </div>
       </div>
     <ul class="link_right hidden-xs">
@@ -46,6 +46,11 @@ export default {
   data () {
     return {
     }
+  },
+  methods:{
+      returnMain(){
+          this.$router.push({path:'/main'})
+      }
   }
 }
 </script>
