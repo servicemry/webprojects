@@ -9,9 +9,6 @@ import {store} from './store/store'
 
 axios.defaults.baseURL="https://wd5397363895kaxpel.wilddogio.com/"
 
-Vue.prototype.$axios=axios
-Vue.config.productionTip = false
-
 // 路由全局守卫，在没登录的情况下，不让进入任何页面
 router.beforeEach((to,from,next)=>{
   if(store.getters.isLogin==false){
@@ -25,6 +22,8 @@ router.beforeEach((to,from,next)=>{
   }
 })
 
+Vue.prototype.$axios=axios
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
@@ -34,3 +33,5 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+

@@ -48,6 +48,7 @@
           })
           if(result!=null && result.length>0){
             // 将当前登录用户的信息状态存入vuex中
+            window.localStorage.setItem('islogin', JSON.stringify(true))//存入本地
             this.$store.commit('setUserStatus',result[0].email)
             this.$router.push({path:'/home'})
           }else{
@@ -58,6 +59,7 @@
         })
       }
     }
+
   }
 </script>
 

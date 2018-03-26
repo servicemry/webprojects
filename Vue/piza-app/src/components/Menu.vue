@@ -81,6 +81,7 @@
     ,
     methods: {
       loadData(){
+        
         this.$axios.get("/products.json")
         .then(res=>{
           this.$store.commit("setMenuItems",res.data)

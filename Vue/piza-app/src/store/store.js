@@ -9,7 +9,7 @@ export const store=new Vuex.Store({
     state: {
         menuItems:[],
         currentUser:null,
-        isLogin:false
+        isLogin:window.localStorage.getItem( 'islogin')
     },
     // 获取属性状态
     getters: {
@@ -40,9 +40,11 @@ export const store=new Vuex.Store({
             if(data){
                 state.currentUser=data
                 state.isLogin=true
+                
             }else{
                 state.currentUser=null
                 state.isLogin=false
+                window.localStorage.removeItem( 'islogin');
             }
         }
     },
